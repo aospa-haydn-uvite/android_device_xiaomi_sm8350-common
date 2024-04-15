@@ -38,6 +38,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_io_policy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_yupik/audio_io_policy.conf \
     $(LOCAL_PATH)/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_yupik/audio_policy_configuration.xml
 
+PRODUCT_PACKAGES += \
+    android.hardware.audio.sounddose-vendor-impl
+
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
@@ -58,6 +61,9 @@ PRODUCT_PACKAGES += \
 # Bluetooth
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     persist.vendor.btstack.enable.lpa=true
+
+PRODUCT_PACKAGES += \
+    android.hardware.bluetooth.audio-impl
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2400
