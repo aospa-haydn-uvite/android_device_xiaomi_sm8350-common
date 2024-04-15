@@ -13,3 +13,6 @@ add_hwservice(hal_camera_server, vendor_hal_cameraperf_hwservice)
 add_hwservice(hal_camera_server, vendor_hal_camerapostproc_xiaomi_hwservice)
 allow hal_camera_client vendor_hal_cameraperf_hwservice:hwservice_manager find;
 allow hal_camera_client vendor_hal_camerapostproc_xiaomi_hwservice:hwservice_manager find;
+
+get_prop(hal_camera_default, system_prop)
+allow hal_camera_default proc_stat:file read;
