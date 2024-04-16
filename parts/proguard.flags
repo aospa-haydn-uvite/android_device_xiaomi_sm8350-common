@@ -1,0 +1,11 @@
+-keep class com.xiaomi.settings.speaker.* {
+  *;
+}
+
+-keep class com.xiaomi.settings.refreshrate.* {
+  *;
+}
+
+-keep class com.xiaomi.settings.thermal.* {
+  *;
+}
